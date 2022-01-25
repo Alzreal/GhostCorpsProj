@@ -22,3 +22,9 @@ def equipment(request):
         'user':logged_in_user(request)
     }
     return render(request, 'ghost/equipment.html', context)
+
+def tobins(request):
+    context={
+        'user':logged_in_user(request)
+    }
+    return render(request, 'ghost/tobins.html', context)

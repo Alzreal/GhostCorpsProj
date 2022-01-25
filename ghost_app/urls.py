@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.index),
     path('messages', views.messages),
     path('equipment', views.equipment),
+    path('tobins', views.tobins),
 ]

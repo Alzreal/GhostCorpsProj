@@ -1,0 +1,13 @@
+.background {
+    height: 1500px;
+    background-image: url(img/smoke_BG.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.equipment {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
