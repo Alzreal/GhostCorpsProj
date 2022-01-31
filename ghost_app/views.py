@@ -51,3 +51,24 @@ def founding(request):
         'user':logged_in_user(request)
     }
     return render(request, 'ghost/founding.html', context)
+
+def EditPage(request):
+    context={
+        'user':logged_in_user(request)
+    }
+    return render (request, 'ghost/EditAccount.html', context)
+
+def EditAccount(request):
+    context={
+        'user':logged_in_user(request)
+    }
+    User.objects.filter(id=logged_in_user(request).id).update(first_name=request.POST['first_name'], 
+    last_name=request.POST['last_name'], 
+    email=request.POST['email'])
+    return redirect ('/gb/EditAccount', context)
+
+def medicorps(request):
+    context={
+        'user':logged_in_user(request)
+    }
+    return render(request, 'ghost/medicorps.html', context)

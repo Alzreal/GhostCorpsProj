@@ -55,60 +55,44 @@
             <img src="{% static '/img/GCBanner.png' %}" alt="Ghost Corps banner logo" style="padding-top: 40px;">
         </div>
         <div class="d-flex justify-content-center">
-            <h1 style="padding-top: 40px; color: ghostwhite;">Welcome, {{user.first_name}}!</h1>
+            <h1 style="padding-top: 40px;">Welcome, {{user.first_name}}!</h1>
         </div>
         <br>
         <div class='d-flex justify-content-center'>
-            <form action="/gb/add_job" method="POST">
-                {% csrf_token %}
-                <h2 style="color: ghostwhite;">Are you troubled by a spook, spectre, or ghost? Request some help from our professionals!</h2>
-                <h3 style="color: ghostwhite;">(Please allow up to 24 hours for someone from our team to contact you)</h3>
-                <div class='d-flex flex-column' style="width: 300px;">
-                    <h4 style="color: red;">Your name:</h4>
-                    <input type="text" name="user_name">
-                    <br>
-                    <h4 style="color: red;">Your location:</h4>
-                    <input type="text" name="location">
-                    <br>
-                    <h4 style="color: red;">Your phone number:</h4>
-                    <input type="text" name="contact">
-                    <br>
-                    <h4 style="color: red;">Tell us about your haunting:</h4>
-                    <textarea name="job"></textarea>
-                    <br>
-                    <button class="btn btn-warning" type="submit">Submit</button>
-                    {% for message in messages %}
-                    <p>{{message}}</p>
-                    {% endfor %}
+            <h3 style='padding-top: 20px;'>Need to edit your information?</h3>
+        </div>
+        <br>
+        <div class='d-flex justify-content-center'>
+            <div class="row">
+                <div class="col">
+                    <div style="display: inline-block;" >  
+                        <form action="/gb/EditAccount" method='POST'>
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <h4>First Name:</h4>
+                                <input type="text" class="form-control" name='first_name'>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <h4>Last Name:</h4>
+                                <input type="text" class="form-control" name='last_name'>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <h4>Email Address:</h4>
+                                <input type="text" class="form-control" name='email'>
+                            </div>
+                            <br>
+                            <button class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
                 </div>
-            </form>
-        </div>
-            <br>
-        <div class='d-flex justify-content-center' style="background-color: snow;">
-            <h1 style="margin-left: 250px; margin-right: 250px;">Current Hauntings</h1>
+            </div>
         </div>
 
-        <textarea name="" id="" cols="100" rows="10">
-            {% for job in jobs %}
-                {{job.user_name}} - {{job.location}} ({{job.created_at}}): "{{job.job}}" - Contact number: {{job.contact}}
-            {% endfor %}
-        </textarea>
 
-        <div class='d-flex justify-content-center' style="background-color: snow;">
-            {% for job in jobs %}
-                {{job.user_name}} - {{job.location}} ({{job.created_at}}): "{{job.job}}" - Contact number: {{job.contact}}
-        </div>
-        <div class='d-flex justify-content-center' style="background-color: snow;">
-                {% if user.id == job.uploaded_by.id %}
-                    <a href="/gb/delete_job/{{job.id}}" class="link-danger">Delete this job</a><br>
-                {% endif %}
-        </div>
-                <br>
-            {% endfor %}
-    </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>

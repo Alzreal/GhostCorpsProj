@@ -1,6 +1,6 @@
 .background {
-    height: 1100px;
-    background-image: url(img/smoke_BG.jpg);
+    height: 1350px;
+    background-image: url(img/Background6.jpg);
     background-size: cover;
     background-position-y: center;
 }
@@ -10,4 +10,24 @@
     flex-direction: row;
     align-items: start;
     justify-content: center;
+}
+
+h1 {
+    color: ghostwhite;
+    text-shadow: 1px 1px 1px black;
+}
+
+h2 {
+    color: ghostwhite;
+    text-shadow: 1px 1px 1px black;
+}
+
+h3 {
+    color: ghostwhite;
+    text-shadow: 1px 1px 1px black;
+}
+
+h4 {
+    color: ghostwhite;
+    text-shadow: 1px 1px 1px black;
 }

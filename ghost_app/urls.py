@@ -10,4 +10,7 @@ urlpatterns = [
     path('equipment', views.equipment),
     path('tobins', views.tobins),
     path('founding', views.founding),
+    path('EditPage', views.EditPage),
+    path('EditAccount', views.EditAccount),
+    path('medicorps', views.medicorps),
 ]
