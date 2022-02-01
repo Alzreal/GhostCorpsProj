@@ -84,17 +84,23 @@
             </form>
         </div>
             <br>
-        <div class='d-flex justify-content-center' style="background-color: snow;">
-            <h1 style="margin-left: 250px; margin-right: 250px;">Current Hauntings</h1>
+        <div class='d-flex justify-content-center'>
+            <h1 style="margin-top: 50px;">Current Hauntings</h1>
+        </div>
+        <div class='d-flex justify-content-center'>
+            <!-- <textarea name="" id="" cols="100" rows="10"> -->
+                {% for job in jobs %}
+                    <h4>{{job.user_name}} - {{job.location}}  - Contact number: {{job.contact}} ({{job.created_at}}): "{{job.job}}"</h4>
+                    <br>
+                    {% if user.id == job.uploaded_by.id %}
+                    <a class="btn btn-danger" href="/gb/delete_job/{{job.id}}" role="button" style="margin-left: 10px;">Delete This Job  <i class="bi bi-trash"></i></a>
+                    {% endif %}
+                {% endfor %}
+                <br>
+            <!-- </textarea> -->
         </div>
 
-        <textarea name="" id="" cols="100" rows="10">
-            {% for job in jobs %}
-                {{job.user_name}} - {{job.location}} ({{job.created_at}}): "{{job.job}}" - Contact number: {{job.contact}}
-            {% endfor %}
-        </textarea>
-
-        <div class='d-flex justify-content-center' style="background-color: snow;">
+        <!-- <div class='d-flex justify-content-center' style="background-color: snow;">
             {% for job in jobs %}
                 {{job.user_name}} - {{job.location}} ({{job.created_at}}): "{{job.job}}" - Contact number: {{job.contact}}
         </div>
@@ -104,7 +110,7 @@
                 {% endif %}
         </div>
                 <br>
-            {% endfor %}
+            {% endfor %} -->
     </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
