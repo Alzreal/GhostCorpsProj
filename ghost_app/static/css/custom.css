@@ -1,5 +1,5 @@
 .background {
-    height: 1350px;
+    height: 1375px;
     background-image: url(img/Background6.jpg);
     background-size: cover;
     background-position-y: center;
@@ -8,26 +8,11 @@
 .equipment {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: stretch;
     justify-content: center;
 }
 
-h1 {
-    color: ghostwhite;
-    text-shadow: 2px 2px 2px black;
-}
-
-h2 {
-    color: ghostwhite;
-    text-shadow: 2px 2px 2px black;
-}
-
-h3 {
-    color: ghostwhite;
-    text-shadow: 2px 2px 2px black;
-}
-
-h4 {
+h1, h2, h3, h4, h5, h6 {
     color: ghostwhite;
     text-shadow: 2px 2px 2px black;
 }
