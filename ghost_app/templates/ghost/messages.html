@@ -76,7 +76,7 @@
                     <h4 style="color: red;">Tell us about your haunting:</h4>
                     <textarea name="job"></textarea>
                     <br>
-                    <button class="btn btn-warning" type="submit">Submit</button>
+                    <button class="btn btn-warning" type="submit">Submit your Haunting</button>
                     {% for message in messages %}
                     <p>{{message}}</p>
                     {% endfor %}
@@ -100,18 +100,6 @@
             </div>
         </div>
         <br>
-
-        <!-- <div class='d-flex justify-content-center' style="background-color: snow;">
-            {% for job in jobs %}
-                {{job.user_name}} - {{job.location}} ({{job.created_at}}): "{{job.job}}" - Contact number: {{job.contact}}
-        </div>
-        <div class='d-flex justify-content-center' style="background-color: snow;">
-                {% if user.id == job.uploaded_by.id %}
-                    <a href="/gb/delete_job/{{job.id}}" class="link-danger">Delete this job</a><br>
-                {% endif %}
-        </div>
-                <br>
-            {% endfor %} -->
     </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
