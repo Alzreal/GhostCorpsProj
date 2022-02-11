@@ -12,13 +12,13 @@
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-center">
-                <img src="{% static '/img/GC_Logo.png' %}" alt="Ghost Corps logo" style="padding-top: 100px;">
+                <img src="{% static '/img/GC_Logo.png' %}" alt="Ghost Corps logo" style="padding-top: 200px;">
             </div>
             <div class="d-flex justify-content-center">
                 <h3 style="padding-bottom: 50px;">Your number 1 site for all things supernatural!</h3>
             </div>
             <div style="display: flex;" > 
-                <h1 style="padding-right: 20px;">Register for the site</h1>
+                <h1 style="padding-right: 20px; margin-left: 220px;">Register</h1>
                 <form action="/register" method='POST'>
                     {% csrf_token %}
                     <div class="form-group">
@@ -52,7 +52,7 @@
                     {% endfor %}
                 </form>
                 <br>
-                <h1 style="padding-left: 20px; padding-right: 20px;">Login</h1>
+                <h1 style="padding-left: 80px; padding-right: 20px;">Login</h1>
                 <form action="/login" method='POST'>
                     {% csrf_token %}
                 <div class="form-group">

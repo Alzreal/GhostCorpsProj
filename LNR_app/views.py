@@ -3,6 +3,9 @@ from django.shortcuts import render, redirect
 from .models import *
 import bcrypt
 
+def landing(request):
+    return render(request, 'LNR_app/landing.html')
+
 def index(request):
     return render(request, 'LNR_app/index.html')
 

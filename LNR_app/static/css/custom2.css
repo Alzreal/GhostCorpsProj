@@ -1,16 +1,9 @@
 .background {
-    height: 1375px;
-    background-image: url(img/Background6.jpg);
+    height: 1290px;
+    background-image: url(img/Background1.jpg);
     background-size: cover;
     background-position-y: center;
     background-attachment: fixed;
-}
-
-.equipment {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
